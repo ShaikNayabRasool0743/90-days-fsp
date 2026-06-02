@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Form Data</title>
+</head>
+<body>
+
+    <form id="myForm">
+
+        <input type="text" id="name" placeholder="Enter Name"><br><br>
+
+        <input type="email" id="email" placeholder="Enter Email"><br><br>
+
+        <button type="submit">Save</button>
+
+    </form>
+
+    <script>
+
+        document.getElementById("myForm").addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+
+            // Store data
+            localStorage.setItem("username", name);
+            localStorage.setItem("useremail", email);
+
+            alert("Data Stored Successfully");
+
+        });
+
+    </script>
+
+</body>
+</html>
